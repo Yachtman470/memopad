@@ -1,0 +1,492 @@
+@charset "utf-8";
+
+/* ---------------------
+全体設定
+--------------------- */
+.title {
+    padding: 10px 0;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Monotype Corsiva';
+}
+
+.title_s {
+    padding: 10px 0;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Monotype Corsiva';
+}
+
+section {
+    padding-bottom: 64px;
+}
+
+/* ---------------------
+ナビゲーションメニュー 設定
+--------------------- */
+
+nav {
+    padding: 0px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Monotype Corsiva';
+}
+
+p {
+    background-size: cover;
+    font-size: 20px;
+}
+
+/* #content {
+    font-family: 'Monotype Corsiva';
+} */
+
+.search_place {
+    margin: auto;
+}
+
+/* .cat_button a { */
+/* width: 100px; */
+/* border: 1px solid #999;
+    background: #d7eaf5; */
+/* } */
+
+
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+}
+
+/* .btn--orange,
+a.btn--orange {
+    color: #fff;
+    background-color: orange;
+}
+
+.btn--green,
+a.btn--green {
+    color: #fff;
+    background-color: green;
+}
+
+.btn--purple,
+a.btn--purple {
+    color: #fff;
+    background-color: purple;
+}
+
+.btn--red,
+a.btn--red {
+    color: #fff;
+    background-color: red;
+} */
+
+a.btn--radius {
+    border-radius: 100vh;
+}
+
+a.btn-flat {
+    overflow: hidden;
+
+    padding: 1.5rem 6rem;
+
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+}
+
+a.btn-flat span {
+    position: relative;
+    z-index: 1;
+}
+
+a.btn-flat-red:before {
+    position: absolute;
+    top: 0;
+    left: calc(-150% + 50px);
+
+    width: 150%;
+    height: 500%;
+
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+
+    background: red;
+}
+
+a.btn-flat-red:after {
+    position: absolute;
+    top: -400%;
+    right: calc(-150% + 50px);
+
+    width: 150%;
+    height: 500%;
+
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+
+    background: red;
+}
+
+a.btn-flat-red {
+    overflow: hidden;
+
+    padding: 1.5rem 6rem;
+
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+}
+
+a.btn-flat-red span {
+    position: relative;
+    z-index: 1;
+}
+
+a.btn-flat-red:hover:before {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(-50%);
+    transform: rotate(45deg) translateX(0) translateY(-50%);
+}
+
+a.btn-flat-red:hover:after {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(50%);
+    transform: rotate(45deg) translateX(0) translateY(50%);
+}
+
+a.btn-flat-orange:before {
+    position: absolute;
+    top: 0;
+    left: calc(-150% + 50px);
+
+    width: 150%;
+    height: 500%;
+
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+
+    background: orange;
+}
+
+a.btn-flat-orange:after {
+    position: absolute;
+    top: -400%;
+    right: calc(-150% + 50px);
+
+    width: 150%;
+    height: 500%;
+
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+
+    background: orange;
+}
+
+a.btn-flat-orange {
+    overflow: hidden;
+
+    padding: 1.5rem 6rem;
+
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+}
+
+a.btn-flat-orange span {
+    position: relative;
+    z-index: 1;
+}
+
+a.btn-flat-orange:hover:before {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(-50%);
+    transform: rotate(45deg) translateX(0) translateY(-50%);
+}
+
+a.btn-flat-orange:hover:after {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(50%);
+    transform: rotate(45deg) translateX(0) translateY(50%);
+}
+
+a.btn-flat-purple:before {
+    position: absolute;
+    top: 0;
+    left: calc(-150% + 50px);
+
+    width: 150%;
+    height: 500%;
+
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+
+    background: purple;
+}
+
+a.btn-flat-purple:after {
+    position: absolute;
+    top: -400%;
+    right: calc(-150% + 50px);
+
+    width: 150%;
+    height: 500%;
+
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+
+    background: purple;
+}
+
+a.btn-flat-purple {
+    overflow: hidden;
+
+    padding: 1.5rem 6rem;
+
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+}
+
+a.btn-flat-purple span {
+    position: relative;
+    z-index: 1;
+}
+
+a.btn-flat-purple:hover:before {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(-50%);
+    transform: rotate(45deg) translateX(0) translateY(-50%);
+}
+
+a.btn-flat-purple:hover:after {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(50%);
+    transform: rotate(45deg) translateX(0) translateY(50%);
+}
+
+a.btn-flat-green:before {
+    position: absolute;
+    top: 0;
+    left: calc(-150% + 50px);
+
+    width: 150%;
+    height: 500%;
+
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+
+    background: green;
+}
+
+a.btn-flat-green:after {
+    position: absolute;
+    top: -400%;
+    right: calc(-150% + 50px);
+
+    width: 150%;
+    height: 500%;
+
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+
+    background: green;
+}
+
+a.btn-flat-green {
+    overflow: hidden;
+
+    padding: 1.5rem 6rem;
+
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+}
+
+a.btn-flat-green span {
+    position: relative;
+    z-index: 1;
+}
+
+a.btn-flat-green:hover:before {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(-50%);
+    transform: rotate(45deg) translateX(0) translateY(-50%);
+}
+
+a.btn-flat-green:hover:after {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(50%);
+    transform: rotate(45deg) translateX(0) translateY(50%);
+}
+
+/* 入力フォーム */
+.cp_iptxt {
+    position: absolute;
+    width: 27.33%;
+    margin: 40px 3%;
+}
+
+.cp_iptxt input[type='text'] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    /* padding-left: 40px; */
+    letter-spacing: 1px;
+    border: 0;
+}
+
+.cp_iptxt input[type='text']:focus {
+    outline: none;
+}
+
+.cp_iptxt input[type='text']:focus::after {
+    outline: none;
+}
+
+.cp_iptxt i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 9px 5px;
+    transition: 0.3s;
+    color: #aaaaaa;
+}
+
+.cp_iptxt::after {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-top: -1px;
+    content: '';
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #da3c41;
+}
+
+/* ここまで */
+
+
+
+.cp_iptxt {
+    position: relative;
+    width: 80%;
+    margin: 40px 3%;
+}
+
+.cp_iptxt input[type='text'] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    letter-spacing: 1px;
+    padding-left: 4em;
+}
+
+.cp_iptxt input[type='text']:focus {
+    outline: none;
+}
+
+.ef {
+    padding: 4px 0;
+    border: 0;
+    border-bottom: 1px solid #1b2538;
+    background-color: transparent;
+}
+
+.ef~.focus_line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transition: 0.4s;
+    background-color: #da3c41;
+}
+
+.ef~.focus_line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transition: 0.4s;
+    background-color: #da3c41;
+}
+
+.ef:focus~.focus_line,
+.cp_iptxt.ef~.focus_line {
+    left: 0;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.ef~label {
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+    color: #aaaaaa;
+}
+
+.ef:focus~label,
+.cp_iptxt.ef~label {
+    font-size: 12px;
+    top: -16px;
+    transition: 0.3s;
+    color: #da3c41;
+}
