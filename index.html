@@ -146,6 +146,7 @@
             function chinese_push() {
                 chi.push(document.getElementById("name").value)
                 console.log(chi);
+                localStorage.setItem('中華料理', JSON.stringify(chi));
                 if (chi.length > 1) {
                     music.play()
                     var t2 = ""
@@ -176,6 +177,7 @@
             function thai_push() {
                 tha.push(document.getElementById("name").value)
                 console.log(tha);
+                localStorage.setItem('タイ料理', JSON.stringify(tha));
                 if (tha.length > 1) {
                     music.play()
                     var t2 = ""
@@ -206,6 +208,7 @@
             function italian_push() {
                 ita.push(document.getElementById("name").value)
                 console.log(ita);
+                localStorage.setItem('イタリア料理', JSON.stringify(ita));
                 if (ita.length > 1) {
                     music.play()
                     var t2 = ""
@@ -236,6 +239,7 @@
             function tempura_push() {
                 tem.push(document.getElementById("name").value)
                 console.log(tem);
+                localStorage.setItem('天ぷら', JSON.stringify(tem));
                 if (tem.length > 1) {
                     music.play()
                     var t2 = ""
